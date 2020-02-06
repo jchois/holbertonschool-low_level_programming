@@ -5,14 +5,14 @@
 */
 int main(void)
 {
-char = abc;
-while (abc != 'q' && abc != 'e')
+char alphabet;
+for (alphabet = 'a'; alphabet <= 'z'; alphabet++)
 {
-for (abc = 'a'; abc <= 'z'; abc++)
+if (alphabet != 'q' && alphabet != 'e')
 {
-putchar(abc);
+putchar(alphabet);
+}
 }
 putchar('\n');
-}
 return (0);
 }
