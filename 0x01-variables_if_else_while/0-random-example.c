@@ -1,10 +1,17 @@
 #include <stdio.h>
-#include<stdlib.h>
-#include<time.h>
-int main() {
-   srand(time(NULL));
-   printf("This is a random number: %d\n", rand());
-   srand(12);
-   printf("This is a random number: %d\n", rand());
-   return 0;
+
+int main()
+{
+    int n, lastDigit;
+
+    /* Input number from user */
+    printf("Enter any number: ");
+    scanf("%d", &n);
+
+    /* Get the last digit */
+    lastDigit = n % 10;
+
+    printf("Last digit = %d\n", lastDigit);
+
+    return 0;
 }
