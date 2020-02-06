@@ -1,15 +1,15 @@
 #include <stdio.h>
 
 /**
-* main - print numbers
+* main - print letters
 * Return: 0
 */
 int main(void)
 {
-int num;
-for (num = 122; num <= 97; num++)
+int l;
+for (l = 122; l > 96; l--)
 {
-putchar(num);
+putchar(l);
 }
 putchar('\n');
 return (0);
