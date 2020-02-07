@@ -1,19 +1,20 @@
 #include <stdio.h>
 
 /**
-* main - print hexa
-* Return: 0 always
+* main - Hexa
+* Return: Always is 0
 */
+
 int main(void)
 {
-int b;
-for (b = 49; b < 58; b++)
+int hexa;
+for (hexa = 48; hexa < 58; hexa++)
 {
-putchar(b);
+putchar(hexa);
 }
-for (b = 66; b < 71; b++)
+for (hexa = 97; hexa < 103; hexa++)
 {
-putchar(b);
+putchar(hexa);
 }
 putchar('\n');
 return (0);
