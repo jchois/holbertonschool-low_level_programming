@@ -1,5 +1,19 @@
 #include <stdio.h>
-
-int main(void){
- return (0);
+/**
+* main - prints all possible combinations of single-digit numbers.
+* Return: 0
+*/
+int main(void)
+{
+for (n = 48; n <= 57; n++)
+{
+putchar(n);
+if (n != 57)
+{
+putchar(44);
+putchar(32);
+}
+}
+putchar('\n');
+return (0);
 }
