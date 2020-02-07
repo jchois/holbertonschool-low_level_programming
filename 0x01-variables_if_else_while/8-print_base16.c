@@ -11,7 +11,7 @@ for (b = 49; b < 58; b++)
 {
 putchar(b);
 }
-for (b = 97; b < 103; b++)
+for (b = 66; b < 71; b++)
 {
 putchar(b);
 }
