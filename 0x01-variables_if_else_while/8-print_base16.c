@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-* main - print alphabet in lowercase
+* main - print hexa
 * Return: 0 always
 */
 int main(void)
@@ -9,12 +9,12 @@ int main(void)
 int b;
 for (b = 49; b < 58; b++)
 {
-putchar (b);
+putchar(b);
 }
 for (b = 97; b < 103; b++)
 {
-putchar (b);
+putchar(b);
 }
-putchar("\n");
+putchar('\n');
 return (0);
 }
