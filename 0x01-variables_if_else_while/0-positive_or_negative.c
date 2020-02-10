@@ -3,8 +3,8 @@
 #include <time.h>
 
 /**
-* main - print a random number
-* Return: 0 always
+* main - Print a random number
+* Return: 0
 */
 int main(void)
 {
