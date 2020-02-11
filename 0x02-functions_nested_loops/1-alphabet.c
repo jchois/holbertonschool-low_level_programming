@@ -1,8 +1,11 @@
 #include "holberton.h"
-
-void print_alphabet(void){
-
+/**
+ * print_alphabet - Print alphabet
+ */
+void print_alphabet(void)
+{
 	char abc;
+
 	abc = 'a';
 
 	while (abc <= 'z')
