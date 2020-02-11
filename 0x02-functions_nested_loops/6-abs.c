@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
  * _abs - computes the absolute value of an integer
- * @r: is the absolute value
+ * @n: is the absolute value
  * Return: 0
  */
 
