@@ -1,12 +1,18 @@
 #include "holberton.h"
 /**
- * print_last_digit - something
- * @n: something
- * Return: 0
+ * print_last_digit - Print the last number
+ * @dig: the variable with the last number
+ * Return: variable
  */
-int print_last_digit(int n)
+int print_last_digit(int dig)
 {
-	n = (n % 10);
-	_putchar(n);
-	return (0);
+	int n;
+
+	n = (dig % 10);
+
+	if (n < 0)
+		n = n * -1;
+
+	_putchar(n + '0');
+	return (n);
 }
