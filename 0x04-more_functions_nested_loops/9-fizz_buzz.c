@@ -16,19 +16,15 @@ int main(void)
 
 		if ((m3 == 0) && (m5 == 0))
 		{
-			printf("%s", "FizzBuzz ");
+			printf("FizzBuzz ");
 		}
 		else if (m3 == 0)
 		{
-			printf("%s", "Fizz ");
+			printf("Fizz ");
 		}
 		else if (m5 == 0)
 		{
-			printf("%s", "Buzz ");
-		}
-		else if (i == 100)
-		{
-			printf("%s", "Buzz");
+			i == 100 ? printf("Buzz") : printf("Buzz ");
 		}
 		else
 		{
