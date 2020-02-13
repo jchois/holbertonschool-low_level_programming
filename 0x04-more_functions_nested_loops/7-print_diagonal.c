@@ -1,14 +1,11 @@
 #include "holberton.h"
-
 /**
- * print_diagonal: print a ' '  n times
- * @n: number of times to print
- * Return: void
+ * print_diagonal - print diagonal
+ * @n: Variable n
  */
-
 void print_diagonal(int n)
 {
-	int i, c;
+	int i, s;
 
 	if (n <= 0)
 	{
@@ -18,9 +15,9 @@ void print_diagonal(int n)
 	{
 		for (i = 0; i < n; i++)
 		{
-			if (c != 0)
+			if (i != 0)
 			{
-				for (c = 0; c < i; c++)
+				for (s = 0; s < i; s++)
 				{
 					_putchar(' ');
 				}
