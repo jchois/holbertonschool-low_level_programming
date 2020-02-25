@@ -1,4 +1,5 @@
 #include "holberton.h"
+
 /**
  * _strcat - function that fills memory with a constant byte
  * @s: Memory space to be filled
@@ -15,6 +16,7 @@ char *_memset(char *s, char b, unsigned int n)
 	{
 		s[i] = b;
 	}
+
 	return (s);
 }
 
