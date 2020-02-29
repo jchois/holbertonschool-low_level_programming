@@ -2,8 +2,8 @@
 
 /**
  * main - print the number of arguments passed into it
- * @argc: unused
- * @argv: number of arguments
+ * @argc: arguments
+ * @argv: unused
  * Return: 0
  */
 
