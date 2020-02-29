@@ -2,8 +2,8 @@
 
 /**
  * main - print its name, followed by a new line
- * @argc: asd
- * @argv: asd
+ * @argc: unused
+ * @argv: string value
  * Return: 0
  */
 
