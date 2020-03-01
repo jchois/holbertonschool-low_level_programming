@@ -11,7 +11,9 @@
 
 int main(int argc, char *argv[])
 {
-	int i, add = 0, j;
+	int i, add, j;
+
+	add = 0;
 
 	if (argc > 1)
 	{
@@ -30,10 +32,9 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		printf("Error\n");
-		return (1);
+		printf("0\n");
+		return (0);
 	}
-
 	printf("%d\n", add);
 	return (0);
 }
