@@ -6,7 +6,7 @@
  * create_array - create an array of chars
  * @size: size of int
  * @c: array
- * Return p or null
+ * Return: 0 or null
  */
 
 char *create_array(unsigned int size, char c)
