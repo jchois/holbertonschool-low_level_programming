@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 /**
- * create_array - asdv
- * @size: asd
- * @c: asd
- * Return pointer
+ * create_array - create an array of chars
+ * @size: size of int
+ * @c: array
+ * Return p or null
  */
 
 char *create_array(unsigned int size, char c)
@@ -35,3 +35,4 @@ char *create_array(unsigned int size, char c)
 	p[i] = '\0';
 	return (p);
 }
+
