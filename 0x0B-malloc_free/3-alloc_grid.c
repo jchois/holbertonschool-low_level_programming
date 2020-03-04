@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * alloc_grid - 2 dimensional array
+ * alloc_grid - 2 dimensional array of integers
  * @width: width
  * @height: height
  * Return: var
@@ -39,3 +39,4 @@ int **alloc_grid(int width, int height)
 	return (var);
 	free(var);
 }
+
