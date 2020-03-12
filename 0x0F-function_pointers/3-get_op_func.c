@@ -1,7 +1,7 @@
 #include "3-calc.h"
 
-/*
- * get_op_func -points a function to another function
+/**
+ * get_op_func - points a function to another function
  * @s: the operator
  * Return: ptr
  */
