@@ -3,7 +3,7 @@
 /**
  * get_op_func - points a function to another function
  * @s: the operator
- * Return: ptr
+ * Return: 0
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -24,4 +24,7 @@ int (*get_op_func(char *s))(int, int)
 			return (ops[i].f);
 		}
 	}
+
+	return (0);
 }
+
