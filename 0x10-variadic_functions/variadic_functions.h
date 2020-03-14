@@ -11,8 +11,8 @@ void print_all(const char * const format, ...);
 
 typedef struct
 {
-	char type;
-	int (*f)();
+	char *type;
+	void (*f)();
 } Dtype;
 
 #endif
