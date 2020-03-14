@@ -4,7 +4,8 @@
  * print_numbers - print numbers
  * followed by a new line
  * @separator: string
- * @Return: Nothing
+ * @n: number
+ * Return: Nothing
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)

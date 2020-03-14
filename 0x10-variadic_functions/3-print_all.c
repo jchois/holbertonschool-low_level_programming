@@ -52,7 +52,7 @@ void print_s(va_list s)
 
 /**
  * print_all - prints anything
- * @format - format
+ * @format: format
  * Return: Nothing
  */
 
