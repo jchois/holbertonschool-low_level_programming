@@ -77,7 +77,7 @@ void print_all(const char * const format, ...)
 		j = 0;
 		while (j < 4)
 		{
-			if(ptr[j].type[0] == format[i])
+			if (ptr[j].type[0] == format[i])
 			{
 				printf("%s", sep);
 				ptr[j].f(list);
