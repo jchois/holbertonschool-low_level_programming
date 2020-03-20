@@ -10,7 +10,7 @@ size_t print_list(const list_t *h)
 {
 	int i;
 
-	for(i = 0; h != NULL; i++)
+	for (i = 0; h != NULL; i++)
 	{
 		if (h->str == NULL)
 		{
@@ -24,3 +24,4 @@ size_t print_list(const list_t *h)
 	}
 	return (i);
 }
+
