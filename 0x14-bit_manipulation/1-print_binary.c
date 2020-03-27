@@ -21,3 +21,4 @@ void print_binary(unsigned long int n)
 	/** (n & 1) Check if integer n is odd */
 	putchar('0' + (n & 1));
 }
+
