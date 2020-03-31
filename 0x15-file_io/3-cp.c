@@ -6,24 +6,31 @@
  * @av: Arguments
  * Return: 0 if failed
  */
-void (int ac, char *av)
+int main(int ac, char **av)
 {
-	int file_from, file_to, fd, fd;
+	int from, to, fd, fd_new;
 	char *buff;
 
-	if (ac != 3)
-		dprint(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
+	buff = malloc(sizeof(char) * 1024);
+	if(!buff)
+		return(0);
 
-	file_from = open(av[1], O_RDONLY);
-	if (file_from == -1)
+	if (ac != 3)
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
+
+	from = open(av[1], O_RDONLY);
+	if (from == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
 
-	file_to = open(av[2],  O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (fp == -1)
+	to = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (to == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 
+
 	fd = read(from, buff, 1024);
-	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
+	if (fd == -1)
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
+
 
 	fd_new = write(to, buff, fd);
 	if (fd_new == -1)
@@ -38,4 +45,3 @@ void (int ac, char *av)
 	free(buff);
 	return (0);
 }
-
