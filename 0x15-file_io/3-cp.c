@@ -12,8 +12,8 @@ int main(int ac, char **av)
 	char *buff;
 
 	buff = malloc(sizeof(char) * 1024);
-	if(!buff)
-		return(0);
+	if (!buff)
+		return (0);
 
 	if (ac != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
@@ -26,11 +26,9 @@ int main(int ac, char **av)
 	if (to == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 
-
 	fd = read(from, buff, 1024);
 	if (fd == -1)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
-
 
 	fd_new = write(to, buff, fd);
 	if (fd_new == -1)
@@ -45,3 +43,4 @@ int main(int ac, char **av)
 	free(buff);
 	return (0);
 }
+
