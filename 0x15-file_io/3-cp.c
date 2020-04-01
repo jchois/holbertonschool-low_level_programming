@@ -2,8 +2,8 @@
 
 /**
  * main - Entry point
- * @ac: Number or arguments
- * @av: Arguments
+ * @argc: Number or arguments
+ * @argv: Arguments
  * Return: 0 if failed
  */
 int main(int argc, char **argv)
