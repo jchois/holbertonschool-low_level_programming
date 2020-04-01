@@ -6,41 +6,44 @@
  * @av: Arguments
  * Return: 0 if failed
  */
-int main(int ac, char **av)
+int main(int argc, char **argv)
 {
-	int from, to, fd, fd_new;
-	char *buff;
+	char buf[1024];
+	int r, file_from, file_to;
 
-	buff = malloc(sizeof(char) * 1024);
-	if (!buff)
-		return (0);
-
-	if (ac != 3)
+	if (argc != 3)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
-
-	from = open(av[1], O_RDONLY);
-	if (from == -1)
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
-
-	to = open(av[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (to == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
-
-	fd = read(from, buff, 1024);
-	if (fd == -1)
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
-
-	fd_new = write(to, buff, fd);
-	if (fd_new == -1)
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
-
-	if (close(from) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", from), exit(100);
-
-	if (close(to) == -1)
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to), exit(100);
-
-	free(buff);
+	file_from = open(argv[1], O_RDONLY);
+	if (file_from == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (file_to == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
+	}
+	r = read(file_from, buf, 1024);
+	while (r > 0)
+	{
+		if (write(file_to, buf, r) != r)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
+		r = read(file_from, buf, 1024);
+	}
+	if (r == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	if (close(file_to))
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_to), exit(100);
+	if (close(file_from))
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from), exit(100);
 	return (0);
 }
 
