@@ -1,6 +1,6 @@
 #include "lists.h"
 
-/*
+/**
  * dlistint_len - elements in a linked list
  * @h: head
  * Return: elements in a linked list
